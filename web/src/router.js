@@ -1,15 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Join from "./pages/Join";
 import Chat from "./pages/Chat";
 // import { Container } from './styles';
 
-const router = () => (
+const Routes = () => (
   <Router>
     <Route path="/" exact component={Join} />
     <Route path="/chat" component={Chat} />
   </Router>
 );
 
-export default router;
+export default Routes;
