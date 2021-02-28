@@ -1,5 +1,11 @@
+import React from "react";
+
+import Routes from "./router";
+
+// import { Container } from './styles';
+
 function App() {
-  return <h1>Web chat</h1>;
+  return <Routes />;
 }
 
 export default App;
