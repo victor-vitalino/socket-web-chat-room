@@ -1,5 +1,3 @@
-import express from "express";
+import app from "./App";
 
-const server = express();
-
-server.listen(3000, () => console.log("server is runing"));
+app.listen(3333, () => console.log("server is runing"));
