@@ -12,16 +12,16 @@ import {
 } from "./styles";
 
 function Join() {
-  const [user, setUser] = useState();
+  const [name, setName] = useState();
   const [room, setRoom] = useState();
   const history = useHistory();
 
   const handleStart = () => {
-    if (!user || !room) {
+    if (!name || !room) {
       alert("Preencha os dados");
       return;
     }
-    history.push(`/chat?user=${user}&room=${room}`);
+    history.push(`/chat?name=${name}&room=${room}`);
   };
   return (
     <Container>
@@ -33,7 +33,7 @@ function Join() {
           <Input
             type="text"
             placeholder="Username"
-            onChange={(event) => setUser(event.target.value)}
+            onChange={(event) => setName(event.target.value)}
           />
           <Input
             type="text"
