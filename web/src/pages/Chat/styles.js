@@ -28,6 +28,7 @@ export const MessageContainer = styled.div`
   height: 90%;
   padding: 10px;
   border-radius: 5px 5px 0px 0px;
+  overflow: hidden;
 `;
 
 export const FormContainer = styled.div`

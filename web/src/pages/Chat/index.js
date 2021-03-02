@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import queryString from "query-string";
 import io from "socket.io-client";
 
+import Header from "../../components/Header";
+import Messages from "../../components/Messages";
+
 import {
   Container,
   Content,
-  MessageContainer,
   FormContainer,
+  MessageContainer,
   InputMessage,
   ButtonSendMessage,
   InputContainer,
@@ -19,7 +22,7 @@ function Chat({ location }) {
   const [room, setRoom] = useState("");
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
-  const ENDPOINT = "192.168.0.105:3333";
+  const ENDPOINT = "localhost:3333";
 
   // connect with server
   useEffect(() => {
@@ -54,14 +57,9 @@ function Chat({ location }) {
   return (
     <Container>
       <Content>
+        <Header room={room} socket={socket} />
         <MessageContainer>
-          {messages.map((msg, i) => (
-            <div key={i}>
-              <p>
-                <b>{msg.user}</b>:{msg.text}
-              </p>
-            </div>
-          ))}
+          <Messages messagesData={messages} name={name} />
         </MessageContainer>
         <FormContainer>
           <InputContainer>
