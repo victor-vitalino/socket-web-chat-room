@@ -1,27 +1,28 @@
 const users = [];
 
-const addUser = ({ id, name, room }) => {
-  name = name.trim().toLowerCase();
-  room = room.trim().toLowerCase();
+class User {
+  addUser = ({ id, name, room }) => {
+    name = name.trim().toLowerCase();
+    room = room.trim().toLowerCase();
 
-  const userExists = users.find((u) => u.name === name && u.room === room);
+    const userExists = users.find((u) => u.name === name && u.room === room);
 
-  if (userExists) return { error: "username is taken" };
+    if (userExists) return { error: "username is taken" };
 
-  const user = { id, name, room };
-  users.push(user);
+    const user = { id, name, room };
+    users.push(user);
 
-  return { user };
-};
-const removeUser = ({ id }) => {
-  const index = users.findIndex((user) => user.id === id);
-  if (index !== -1) {
-    return users.splice(index, 1)[0];
-  }
-};
+    return { user };
+  };
+  removeUser = ({ id }) => {
+    const index = users.findIndex((user) => user.id === id);
+    if (index !== -1) {
+      return users.splice(index, 1)[0];
+    }
+  };
 
-const getUser = (id) => users.find((user) => user.id === id);
+  getUser = (id) => users.find((user) => user.id === id);
 
-const getUsersInRoom = (room) => users.filter((user) => user.room === romm);
-
-export  { addUser, removeUser, getUser, getUsersInRoom };
+  getUsersInRoom = (room) => users.filter((user) => user.room === romm);
+}
+export default new User();
