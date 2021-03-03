@@ -25,10 +25,10 @@ export const Content = styled.div`
 export const MessageContainer = styled.div`
   background-color: #eeea;
   width: 100%;
-  height: 90%;
+  height: 100%;
   padding: 10px;
   border-radius: 5px 5px 0px 0px;
-  overflow: hidden;
+  overflow: scroll;
 `;
 
 export const FormContainer = styled.div`
