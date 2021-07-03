@@ -1,7 +1,7 @@
 # Web chat room
 ![Alt text](/user.gif?raw=true "Title")
 
-> projetinho simple de uma sala de bate papo realtime 
+> projetinho simples de uma sala de bate papo realtime 
 
 # Nodejs
 Backend construido  em node, com Express e Socket.io para comunicação e envio/recebimento de mensagens em tempo real
